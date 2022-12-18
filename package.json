@@ -11,6 +11,7 @@
   },
   "private": true,
   "scripts": {
+    "postinstall": "pnpm run chmod-fix",
     "clean": "pnpm run clean:root",
     "clean:root": "rimraf node_modules",
     "publish:release": "lerna publish",
@@ -21,7 +22,8 @@
     "build:all": "pnpm run -r --if-present build",
     "test:all": "pnpm run clean:test && cross-env START_ADAPTER=solid-start-node npm run test",
     "test": "pnpm run clean:test && pnpm --filter solid-start-tests test --",
-    "bump": "node scripts/bump.cjs"
+    "bump": "node scripts/bump.cjs",
+    "chmod-fix": "node scripts/chmod-fix.cjs"
   },
   "devDependencies": {
     "@cloudflare/kv-asset-handler": "^0.2.0",
