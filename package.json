@@ -11,7 +11,6 @@
   },
   "private": true,
   "scripts": {
-    "postinstall": "pnpm run chmod-fix",
     "clean": "pnpm run clean:root",
     "clean:root": "rimraf node_modules",
     "publish:release": "lerna publish",
