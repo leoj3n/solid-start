@@ -363,3 +363,46 @@ h4 {
 .DocSearch-Button {
   @apply bg-white ml-0 rounded-md w-full
 }
+
+/* SCROLL INDICATOR */
+
+.scroll-indicator-inner {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.scroll-marker-container {
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.scroll-marker-container span {
+  right: 0;
+  width: 10px;
+  height: 5px;
+  display: block;
+  position: absolute;
+  background-color: lightgray;
+}
+
+nav a.text-primary span {
+  position: relative;
+}
+
+nav a.text-primary span {
+  text-decoration: underline;
+}
+
+nav a.text-primary span::after {
+  top: 0;
+  right: -32px;
+  content: "";
+  width: 10px;
+  height: 1em;
+  display: block;
+  position: absolute;
+  background-color: rgb(68 131 193);
+}
